@@ -1,5 +1,8 @@
+// Opt out of caching for all data requests in the route segment
+export const dynamic = 'force-dynamic'
+
 export default async function ProjectsPage () {
-    const response = await fetch('http://localhost:3001/repos');
+    const response = await fetch('http://localhost:3001/repos', { next: { revalidate: 3 } });
     const repos = await response.json(); 
 
     return(
