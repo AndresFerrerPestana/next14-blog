@@ -1,13 +1,13 @@
 'use client'
 
 import {useState} from "react"
-import Card from "./../components/card"
+import Card from "@/components/card"
 
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(true);
   const[names, setNames] = useState(['Andres', 'Patricia', 'Daniel', 'Martim']);  
-  const name = "Hello Andres";
+  const name = "Andres";
 
   const handleClick = () => {
     setIsVisible(!isVisible);
@@ -22,9 +22,9 @@ export default function Home() {
 
   return (
     <>
-    <div className="p-20 space-y-4">
+    <div className="space-y-4">
       
-    <div>{name}</div>
+    <div>Hello, {name}</div>
       
       {cards}
 
