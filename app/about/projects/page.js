@@ -13,7 +13,7 @@ export default async function ProjectsPage () {
                 <Suspense fallback={<ProjectListLoading />}>
                     <ProjectList />
                 </Suspense>
-            </ErrorBoundary>           
+            </ErrorBoundary>          
         </div>
     )
 }

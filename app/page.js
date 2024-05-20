@@ -5,6 +5,7 @@ import Card from "@/components/card"
 
 
 export default function Home() {
+
   const [isVisible, setIsVisible] = useState(true);
   const[names, setNames] = useState(['Andres', 'Patricia', 'Daniel', 'Martim']);  
   const name = "Andres";

@@ -9,7 +9,7 @@ export default async function ProjectList() {
   )
   const repos = await response.json()
 
-  throw new Error('oops')
+  // throw new Error('oops')
 
   return (
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
