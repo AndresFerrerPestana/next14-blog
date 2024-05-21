@@ -4,10 +4,10 @@ import {useState} from "react"
 import Card from "@/components/card"
 
 
-export default function Home() {
+export default function Home({searchParams}) {
 
   const [isVisible, setIsVisible] = useState(true);
-  const[names, setNames] = useState(['Andres', 'Patricia', 'Daniel', 'Martim']);  
+  const [names, setNames] = useState(['Andres', 'Patricia', 'Daniel', 'Martim']);  
   const name = "Andres";
 
   const handleClick = () => {
@@ -20,6 +20,9 @@ export default function Home() {
 
 
   const cards = isVisible && names.map((name, index) => <Card key={index}>{name}</Card>)
+
+  console.log(searchParams)
+  if (searchParams.error) throw new Error('Hello, there was an error!')
 
   return (
     <>
